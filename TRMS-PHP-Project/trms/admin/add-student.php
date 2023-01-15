@@ -30,50 +30,6 @@ if (strlen($_SESSION['trmsaid']==0)) {
         } else {
             echo '<script>alert("Something Went Wrong. Please try again")</script>';
         }
-
-
-
-
-        // $query=$dbh->prepare("SELECT * from  tblteacher where Email='$email' ||  MobileNumber='$mobnum'");
-        // $query->execute();
-        // $results=$query->fetchAll(PDO::FETCH_OBJ);
-        
-        // if($query->rowCount() > 0) {
-        //     echo "<script>alert('This email or Contact Number already associated with another account');</script>";
-        //     echo "<script>window.location.href='add-teacher.php'</script>";
-        // } else {
-        //     $extension = substr($propic,strlen($propic)-4,strlen($propic));
-        //     $allowed_extensions = array(".jpg","jpeg",".png",".gif");
-        //     if(!in_array($extension,$allowed_extensions)) {
-        //         echo "<script>alert('Profile Pics has Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
-        //     }
-        //     else {
-
-        //         $propic=md5($propic).time().$extension;
-        //         move_uploaded_file($_FILES["propic"]["tmp_name"],"../teacher/images/".$propic);
-        //         $sql="insert into tblteacher(Name,Picture,Email,MobileNumber,Qualifications,Address,TeacherSub,JoiningDate,teachingExp,description)values(:tname,:tpics,:email,:mobilenumber,:qualifications,:address,:tsubjects,:joiningdate,:teachingexp,:description)";
-        //         $query=$dbh->prepare($sql);
-        //         $query->bindParam(':tname',$tname,PDO::PARAM_STR);
-        //         $query->bindParam(':tpics',$propic,PDO::PARAM_STR);
-        //         $query->bindParam(':email',$email,PDO::PARAM_STR);
-        //         $query->bindParam(':qualifications',$quali,PDO::PARAM_STR);
-        //         $query->bindParam(':mobilenumber',$mobnum,PDO::PARAM_STR);
-        //         $query->bindParam(':address',$address,PDO::PARAM_STR);
-        //         $query->bindParam(':tsubjects',$tsubjects,PDO::PARAM_STR);
-        //         $query->bindParam(':joiningdate',$tdate,PDO::PARAM_STR);
-        //         $query->bindParam(':teachingexp',$teachingexp,PDO::PARAM_STR);
-        //         $query->bindParam(':description',$description,PDO::PARAM_STR);
-        //         $query->execute();
-        //         $LastInsertId=$dbh->lastInsertId();
-                
-        //         if ($LastInsertId>0) {
-        //             echo '<script>alert("Teacher Detail has been added.")</script>';
-        //             echo "<script>window.location.href ='manage-teacher.php'</script>";
-        //         } else {
-        //             echo '<script>alert("Something Went Wrong. Please try again")</script>';
-        //         }
-        //     }
-        // }
     }
 ?>
 
@@ -151,15 +107,15 @@ if (strlen($_SESSION['trmsaid']==0)) {
                                 <div class="card-body card-block">
 
                                     <div class="form-group"><label for="company" class=" form-control-label">
-                                            Name</label><input type="text" name="tname" value="" class="form-control"
-                                            id="tname" required="true"></div>
+                                            Name</label><input type="text" name="name" value="" class="form-control"
+                                            id="name" required="true"></div>
                                     
 
 
                                     <div class="row form-group">
                                         <div class="col-12">
                                             <div class="form-group"><label for="city" class=" form-control-label">
-                                                    Subjects</label><select type="text" name="tsubjects" id="tsubjects"
+                                                    Subjects</label><select type="text" name="subject_id" id="subject_id"
                                                     value="" class="form-control" required="true">
                                                     <option value="">Choose Subjects</option>
                                                     <?php 
@@ -167,13 +123,14 @@ if (strlen($_SESSION['trmsaid']==0)) {
                                                         $query2 = $dbh -> prepare($sql2);
                                                         $query2->execute();
                                                         $result2=$query2->fetchAll(PDO::FETCH_OBJ);
-                                                        foreach($result2 as $row)
-                                                        {          
+                                                        foreach($result2 as $row) {          
                                                     ?>
-                                                    <option value="<?php echo htmlentities($row->Subject);?>">
-                                                        <?php echo htmlentities($row->Subject);?></option>
+                                                        <option value="<?php echo htmlentities($row->ID);?>">
+                                                            <?php echo htmlentities($row->Subject);?>
+                                                        </option>
                                                     <?php } ?>
-                                                </select></div>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -181,11 +138,11 @@ if (strlen($_SESSION['trmsaid']==0)) {
                                     <div class="row form-group">
                             <div class="col-12">
                                 <div class="form-group"><label for="city" class=" form-control-label">Gender</label>
-                                    <select type="text" name="tsubjects" id="tsubjects"
+                                    <select type="text" name="gender" id="gender"
                                             value="" class="form-control" required="true">
-                                            
-                                            <option value="">Male</option>
-                                            <option value="">Female</option>
+                                            <option value="">Choose Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
                                             
                                     </select>
                                 </div>
