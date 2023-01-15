@@ -31,8 +31,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Student</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-file-o"></i><a href="add-subjects.php">Add Student</a></li>
-                            <li><i class="menu-icon fa fa-file-o"></i><a href="manage-subjects.php">Manage Student</a></li>
+                            <li><i class="menu-icon fa fa-file-o"></i><a href="add-student.php">Add Student</a></li>
+                            <li><i class="menu-icon fa fa-file-o"></i><a href="manage-student.php">Manage Student</a></li>
                         </ul>
                     </li>
 
