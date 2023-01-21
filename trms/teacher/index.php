@@ -53,7 +53,7 @@ echo "<script>alert('Invalid Details');</script>";
 
 </head>
 
-<body class="bg-dark" style=" background-image: url('images/cool-background.png');">
+<body class="bg-dark" style=" background-image: url('https://www.cepsim.es/wp-content/uploads/2016/02/fondo-gris-min-700x438.png');">
 
 
     <div class="sufee-login d-flex align-content-center flex-wrap" >

@@ -72,7 +72,7 @@ echo "<script>window.location.href ='index.php'</script>";
 
 </head>
 
-<body class="bg-dark" style=" background-image: url('images/cool-background.png');">
+<body class="bg-dark" style=" background-image: url('https://www.cepsim.es/wp-content/uploads/2016/02/fondo-gris-min-700x438.png');">
 
 
     <div class="sufee-login d-flex align-content-center flex-wrap" >
@@ -103,7 +103,8 @@ echo "<script>window.location.href ='index.php'</script>";
                         </div> 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="password" required="true">
+                                <input type="password" class="form-control" placeholder="Password" name="password" required="true"
+                                required pattern="{4-8}" title="write 4-8 characters">
                         </div>
                           
                                 <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30" name="submit">Sign Up</button>

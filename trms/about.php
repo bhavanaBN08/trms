@@ -25,7 +25,17 @@
                         <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="images/about-us.jpg" alt="..." /></div>
                         <div class="col-lg-6">
                             <h2 class="fw-bolder">About Us</h2>
-                            <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est, ut esse a labore aliquam beatae expedita. Blanditiis impedit numquam libero molestiae et fugit cupiditate, quibusdam expedita, maiores eaque quisquam.</p>
+                            <p class="lead fw-normal text-muted mb-0">
+                            Teacher Record management System contains data and information of teacher. 
+                            The main purpose of TRMS is to systematically record,store and update the 
+                            teachers records.Progressions can be brought about in the overall system of
+                            education, when the concept of teacher management is identified in an 
+                            appropriate manner.Teachers are the ones, who are impart knowledge and
+                            information  to the students in such a manner and ensure that their growth
+                            and development takes place in an operative manner and they are able to
+                            acheive their academic goals and objectives.                   
+
+                            </p>
                         </div>
                     </div>
                 </div>
